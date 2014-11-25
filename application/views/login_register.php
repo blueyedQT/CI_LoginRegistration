@@ -8,6 +8,9 @@
 <body>
 	<form action="login_user" method="post">
 		<h1>Log In</h1>
+<?php 	if(!empty($this->session->flashdata('login_error'))) {
+			echo $this->session->flashdata('login_error');
+		} ?>
 		<p class="red">Email: <input type="text" name="email" placeholder="xyz@example.com"></p>
 		<p>Password: <input type="password" name="password"></p>
 		<input type="submit" name="login" value="Login">

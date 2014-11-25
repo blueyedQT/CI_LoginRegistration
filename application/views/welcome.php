@@ -3,15 +3,15 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Welcome</title>
+	<link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
 </head>
 <body>
-	<?php var_dump($this->session->all_userdata()); ?>
-	<h1>Welcome <?php echo $this->session->userdata['user'] ?></h1>
-	<a href="#">Logout</a>
+	<h1 class="col-md-4">Welcome <?php echo $user['first_name'] ?></h1>
+	<a class="col-md-5" href="logout">Logout</a>
 	<div class="box">
-		<p>First Name: (Name)</p>
-		<p>Last Name: (Name)</p>
-		<p>Email Address: (email)</p>
+		<p>First Name: <?php echo $user['first_name'] ?></p>
+		<p>Last Name: <?php echo $user['last_name'] ?></p>
+		<p>Email Address: <?php echo $user['email'] ?></p>
 	</div>
 </body>
 </html>

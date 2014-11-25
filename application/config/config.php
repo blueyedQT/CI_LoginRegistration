@@ -30,7 +30,7 @@ $config['log_date_format'] = 'Y-m-d H:i:s';
 
 $config['cache_path'] = '';
 
-$config['encryption_key'] = '(00|_3n(rYp+!0n_k3Y';
+$config['encryption_key'] = 'codingdojo';
 
 $config['sess_cookie_name']		= 'ci_session';
 $config['sess_expiration']		= 0;

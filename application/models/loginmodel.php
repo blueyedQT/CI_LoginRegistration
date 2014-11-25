@@ -1,9 +1,9 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 class LoginModel extends CI_Model {
 
-	public function login_db($user) {
-		var_dump($user);
+	public function login_db($email) {
+		return $this->db->query("SELECT * FROM users WHERE email = ?", array($email))->row_array();
 	}
 
 	public function add_user($user) {
