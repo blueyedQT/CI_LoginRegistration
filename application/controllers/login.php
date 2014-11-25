@@ -3,7 +3,8 @@
 class Login extends CI_Controller {
 
 	public function index() {
-		$this->load->view('login_register');
+		$display['login_error'] = $this->session->flashdata('login_error');
+		$this->load->view('login_register', $display);
 	}
 
 	public function login_user() {
